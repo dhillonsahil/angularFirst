@@ -1,0 +1,5 @@
+<app-add-note (todoadd)="addtodo($event)"></app-add-note>
+<div *ngIf="this.todos.length===0">No Notes to display</div>
+<div *ngFor="let todo of todos">
+    <app-todo [todo]="todo" (todoDelete)="deleteTodo($event)"></app-todo>
+</div>
